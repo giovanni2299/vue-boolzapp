@@ -62,11 +62,13 @@
                 <ul class="friends">
                     <li class="friend slide-in-left" v-for="(contact, i) in contacts">
                         <div class="friend__img">
-                            <img :src="contact.avatar" alt="">
+                            <img :src="contact.avatar" :alt="contact.name">
                         </div>
                         <div class="friend__info display-none">
-                              <p><strong>{{contact.name}}</strong></p> 
-                              <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                              <p><strong>{{contact.name}}</strong></p>
+                              <div>
+                                  <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                              </div> 
                         </div>
                         <div class="list-time display-none">16.15</div>
                     </li>
@@ -175,16 +177,24 @@
                         </ul>
                     </div>
                 </div>
+
+
+                <!-- MAIN CHAT   -->
+                
                 <div class="col__body flex-column">
-                    <div class="box-message green align-self slide-in-right">
-                        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores similique <!--<span><i class="fa-solid fa-angle-down"></i></span>--> perferendis aliquid impedit. Hic consectetur, obcaecati debitis aut quod natus blanditiis eaque id veniam. Sit perspiciatis quos in non.</p>
+                    <div class="box-message green align-self slide-in-right" v-for="(contact, i) in contacts">
+                        <p class="message" v-for="(message,i) in contacts[i].messages">{{message.message}}</p>
                         <p class="clock__time">16:13</p>
                     </div>
-                    <div class="box-message white slide-in-left">
-                        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores similique <!--<span><i class="fa-solid fa-angle-down"></i></span>--> perferendis aliquid impedit. Hic consectetur, obcaecati debitis aut quod natus blanditiis eaque id veniam. Sit perspiciatis quos in non.</p>
+
+                    <div class="box-message white slide-in-left" v-for="(contact, i) in contacts" >
+                        <p class="message" v-for="(message,i) in contacts[i].messages">
+                            {{message.message}}
+                        </p>
                         <p class="clock__time">16:13</p>
                     </div>
                 </div>
+
                 <div class="col__footer flex">
                     <div class="emoji display-none">
                         <a href="#">

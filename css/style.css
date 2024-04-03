@@ -306,6 +306,8 @@ aside {
     flex-grow: 1;
     align-content: baseline;
     transition: all 500ms;
+    /* flex-shrink: 0; */
+    overflow: auto;
 }
 
 .box-message {

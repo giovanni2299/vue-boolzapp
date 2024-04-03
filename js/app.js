@@ -167,6 +167,18 @@ createApp({
                 }
             ]
         }
+    },
+
+    methods:{
+        recivedAndSent(){
+            if(this.contacts.messages.status === 'recived'){
+
+            }
+        }
+    },
+
+    mounted(){
+        console.log(this.contacs[this.messages.status] )
     }
 }).mount('#app')
 
