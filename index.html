@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/6b2dd29c8e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>BOOLZAPP</title>
 </head>
 <body class="debug">
@@ -54,19 +55,23 @@
                         <input class="serch-friends-area" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
+                
 
+
+                <!-- FRIENDS -->
                 <ul class="friends">
-                    <li class="friend slide-in-left">
+                    <li class="friend slide-in-left" v-for="(contact, i) in contacts">
                         <div class="friend__img">
-                            <img src="./img/avatar_1.jpg" alt="">
+                            <img :src="contact.avatar" alt="">
                         </div>
                         <div class="friend__info display-none">
-                              <p><strong>Michele</strong></p> 
+                              <p><strong>{{contact.name}}</strong></p> 
                               <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
                         </div>
                         <div class="list-time display-none">16.15</div>
                     </li>
-                    <li class="friend slide-in-left_S">
+
+                    <!-- <li class="friend slide-in-left_S">
                         <div class="friend__img">
                             <img src="./img/avatar_2.jpg" alt="">
                         </div>
@@ -135,9 +140,10 @@
                             <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
                       </div>
                       <div class="list-time display-none">15:15</div>
-                    </li>
+                    </li> -->
                 </ul>
             </aside>
+
             <div class="col12 flex-column">
                 <div class="col__header flex">
                     <div class="contact flex">
@@ -200,5 +206,8 @@
             
         </div>
     </div>
+
+
+    <script src="./js/app.js"></script>
 </body>
 </html>
