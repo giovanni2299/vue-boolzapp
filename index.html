@@ -60,7 +60,7 @@
 
                 <!-- FRIENDS -->
                 <ul class="friends">
-                    <li class="friend slide-in-left" v-for="(contact, i) in contacts">
+                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i">
                         <div class="friend__img">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>
@@ -150,10 +150,10 @@
                 <div class="col__header flex">
                     <div class="contact flex">
                         <div class="contact__img">
-                            <img src="./img/avatar_1.jpg" alt="">
+                            <img :src="contacts[currentUser].avatar" alt="">
                         </div>
                         <div class="contact__info">
-                            <h3>Michele</h3>
+                            <h3>{{contacts[currentUser].name}}</h3>
                             <p class="last-access">Ultimo accesso oggi alle 16:26</p class="Last Access">
                         </div>
                     </div>
