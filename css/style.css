@@ -332,13 +332,15 @@ aside {
     animation-duration: 2.5s;
 }
 
-.green {
+.sent {
     background-color: #DEF8C0;
+    
 
 }
 
-.white {
+.received {
     background-color: white;
+    align-self: flex-start;
 }
 
 .message {

@@ -182,17 +182,19 @@
                 <!-- MAIN CHAT   -->
                 
                 <div class="col__body flex-column">
-                    <div class="box-message green align-self slide-in-right" v-for="(contact, i) in contacts">
-                        <p class="message" v-for="(message,i) in contacts[i].messages">{{message.message}}</p>
-                        <p class="clock__time">16:13</p>
-                    </div>
-
-                    <div class="box-message white slide-in-left" v-for="(contact, i) in contacts" >
-                        <p class="message" v-for="(message,i) in contacts[i].messages">
+                    <div :class="message.status" class="box-message align-self slide-in-right" v-for="(message, i) in contacts[currentUser].messages">
+                        <p class="message" >
                             {{message.message}}
                         </p>
                         <p class="clock__time">16:13</p>
                     </div>
+
+                    <!-- <div class="box-message received slide-in-left" v-for="(message, i) in contacts[currentUser].messages">
+                        <p class="message" >
+                            {{message.message}}
+                        </p>
+                        <p class="clock__time">16:13</p>
+                    </div> -->
                 </div>
 
                 <div class="col__footer flex">

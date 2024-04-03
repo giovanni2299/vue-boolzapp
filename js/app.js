@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            currentUser:0,
             contacts: [
                 {
                     name: 'Michele',
@@ -170,15 +171,16 @@ createApp({
     },
 
     methods:{
-        recivedAndSent(){
-            if(this.contacts.messages.status === 'recived'){
+        // recivedAndSent(){
+        //     for(let i = 0;){}
+        //     if(this.contacts.messages.status === 'recived'){
 
-            }
-        }
+        //     }
+        // }
     },
 
     mounted(){
-        console.log(this.contacs[this.messages.status] )
+        console.log(this.contacts[1].messages[1].status)
     }
 }).mount('#app')
 
