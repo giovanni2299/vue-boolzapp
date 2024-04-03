@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/6b2dd29c8e.js" crossorigin="anonymous"></script>
+    <title>BOOLZAPP</title>
+</head>
+<body class="debug">
+    <div id="app">
+        <div class="container row">
+            <aside class="col-aside display-none">
+                <div class="user flex display-none">
+                    <img src="./img/avatar_io.jpg" alt="">
+                    <ul class="cta flex">
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-circle-notch"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-message"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="message-blue flex">
+                    <div class="bell">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="notification">
+                        <p class="notification-title">
+                            <strong>
+                                Ricevi notifiche di nuovi messaggi
+                            </strong>
+                        </p>
+                        <a class="alone" href="#">Attiva notifiche deckstop</a>
+                    </div>
+                </div>
+
+                <div class="serch-container">
+                    <div class="magnifying display-none">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <input class="serch-friends-area" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+
+                <ul class="friends">
+                    <li class="friend slide-in-left">
+                        <div class="friend__img">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                              <p><strong>Michele</strong></p> 
+                              <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                        </div>
+                        <div class="list-time display-none">16.15</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_2.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Fabio</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">16.05</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_3.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Samuele</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">16.03</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_4.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Alessandro B.</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">15:50</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_5.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Alessandro L.</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">15:45</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_6.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Claudia</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">15:40</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_7.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Federico</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">15:22</div>
+                    </li>
+                    <li class="friend slide-in-left_S">
+                        <div class="friend__img">
+                            <img src="./img/avatar_8.jpg" alt="">
+                        </div>
+                        <div class="friend__info display-none">
+                            <p><strong>Davide</strong></p> 
+                            <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                      </div>
+                      <div class="list-time display-none">15:15</div>
+                    </li>
+                </ul>
+            </aside>
+            <div class="col12 flex-column">
+                <div class="col__header flex">
+                    <div class="contact flex">
+                        <div class="contact__img">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="contact__info">
+                            <h3>Michele</h3>
+                            <p class="last-access">Ultimo accesso oggi alle 16:26</p class="Last Access">
+                        </div>
+                    </div>
+                    <div class="menu display-none">
+                        <ul class="flex">
+                            <li class="menu__items">
+                                <a href="#">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </li>
+                            <li class="menu__items">
+                                <a href="#">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                </a>
+                            </li>
+                            <li class="menu__items">
+                                <a href="#">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col__body flex-column">
+                    <div class="box-message green align-self slide-in-right">
+                        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores similique <!--<span><i class="fa-solid fa-angle-down"></i></span>--> perferendis aliquid impedit. Hic consectetur, obcaecati debitis aut quod natus blanditiis eaque id veniam. Sit perspiciatis quos in non.</p>
+                        <p class="clock__time">16:13</p>
+                    </div>
+                    <div class="box-message white slide-in-left">
+                        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores similique <!--<span><i class="fa-solid fa-angle-down"></i></span>--> perferendis aliquid impedit. Hic consectetur, obcaecati debitis aut quod natus blanditiis eaque id veniam. Sit perspiciatis quos in non.</p>
+                        <p class="clock__time">16:13</p>
+                    </div>
+                </div>
+                <div class="col__footer flex">
+                    <div class="emoji display-none">
+                        <a href="#">
+                            <i class="fa-regular fa-face-smile">
+                            </i>
+                                
+                        </a>
+                    </div>
+                    <input class="type__here" type="text" placeholder="Scrivi un messaggio">
+                    <div class="send__audio display-none">
+                        <a href="#">
+                            <i class="fa-solid fa-microphone">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
