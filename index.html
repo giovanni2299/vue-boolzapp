@@ -60,7 +60,7 @@
 
                 <!-- FRIENDS -->
                 <ul class="friends">
-                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i" :class="contact.name.includes(search) ? '' : 'hidden' ">
+                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i" :class="contact.name.toLowerCase().includes(search) ? '' : 'hidden' ">
                         <div class="friend__img">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>
