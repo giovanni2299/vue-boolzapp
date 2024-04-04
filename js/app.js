@@ -173,13 +173,27 @@ createApp({
 
     methods:{
         newInsertMessage(){
-            this.newMessage = {
-                date: '10/01/2020 17:51:00',
-                message: this.newMessage,
-                status: 'sent'
-            };
-            this.contacts[this.currentUser].messages.push(this.newMessage)
-            this.newMessage = ''
+            if(this.newMessage !== ''){
+                this.newMessage = {
+                    date: '10/01/2020 17:51:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                };
+                this.contacts[this.currentUser].messages.push(this.newMessage)
+                this.newMessage = ''
+                
+            }
+            setTimeout(() =>{
+                this.message = {
+                    message:'OK !!!',
+                    date: '10/01/2020 18:05:00',
+                    status: 'recived'
+                }
+                this.contacts[this.currentUser].messages.push(this.newMessage)
+                this.newMessage = ''
+                
+            },1000)
+
         }
     },
 
