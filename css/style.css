@@ -404,7 +404,7 @@ aside {
     border: 1px solid red;
 } */
 
-@keyframes slide-in-right {
+/* @keyframes slide-in-right {
     0% {
         opacity: 0;
         transform: translateX(50px);
@@ -425,7 +425,7 @@ aside {
         opacity: 1;
         transform: translateX(0);
     }
-}
+} */
 
 /* @keyframes slide-in-left {
     0% {

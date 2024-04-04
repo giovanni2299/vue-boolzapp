@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newMessage:'',
             currentUser:0,
             contacts: [
                 {
@@ -171,12 +172,15 @@ createApp({
     },
 
     methods:{
-        // recivedAndSent(){
-        //     for(let i = 0;){}
-        //     if(this.contacts.messages.status === 'recived'){
-
-        //     }
-        // }
+        newInsertMessage(){
+            this.newMessage = {
+                date: '10/01/2020 17:51:00',
+                message: this.newMessage,
+                status: 'sent'
+            };
+            this.contacts[this.currentUser].messages.push(this.newMessage)
+            this.newMessage = ''
+        }
     },
 
     mounted(){
