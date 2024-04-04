@@ -52,7 +52,7 @@
                         <a href="#">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
-                        <input class="serch-friends-area" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input class="serch-friends-area" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
                     </div>
                 </div>
                 
@@ -60,7 +60,7 @@
 
                 <!-- FRIENDS -->
                 <ul class="friends">
-                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i">
+                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i" :class="contact.name.includes(search) ? '' : 'hidden' ">
                         <div class="friend__img">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>

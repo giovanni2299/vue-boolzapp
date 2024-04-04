@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            search: '',
             newMessage:'',
             currentUser:0,
             contacts: [
@@ -182,17 +183,18 @@ createApp({
                 this.contacts[this.currentUser].messages.push(this.newMessage)
                 this.newMessage = ''
                 
+                setTimeout(() =>{
+                    this.newMessage = {
+                        message:'OK!!!',
+                        date: '10/01/2020 18:05:00',
+                        status: 'received'
+                    }
+                    this.contacts[this.currentUser].messages.push(this.newMessage)
+                    this.newMessage = ''
+    
+                },1000)
             }
-            setTimeout(() =>{
-                this.message = {
-                    message:'OK !!!',
-                    date: '10/01/2020 18:05:00',
-                    status: 'recived'
-                }
-                this.contacts[this.currentUser].messages.push(this.newMessage)
-                this.newMessage = ''
-                
-            },1000)
+            
 
         }
     },

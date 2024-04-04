@@ -103,6 +103,14 @@ aside {
     border-bottom: 1px solid #F5F5F5;
 }
 
+.friend:hover{
+    background-color: #d5d4d4;
+}
+
+.friend.hidden{
+    display: none;
+}
+
 .friend img {
     height: 50px;
     aspect-ratio: 1 / 1;
