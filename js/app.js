@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            thisFilterContact: [],
             search: '',
             newMessage:'',
             currentUser:0,
@@ -196,7 +197,13 @@ createApp({
             }
             
 
-        }
+        },
+        // searchContact(){
+        //     const contactsFilter = this.contacts.filter(contact => {
+        //         return contact.name.toLowerCase().includes(this.search.toLowerCase());
+        //     });
+        //     this.thisFilterContact = contactsFilter;
+        // }
     },
     computed:{
         // returnName(){
