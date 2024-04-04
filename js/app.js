@@ -198,10 +198,19 @@ createApp({
 
         }
     },
+    computed:{
+        // returnName(){
+        //     if(this.search === toLowerCase(this.search)){
+        //         for(let i = 0; i < contacts.name.length; i++){
 
-    mounted(){
-        console.log(this.contacts[1].messages[1].status)
-    }
+        //         }
+        //     }
+        // }
+    },
+
+    // mounted(){
+    //     console.log(this.contacts[1].messages[1].status)
+    // }
 }).mount('#app')
 
 
