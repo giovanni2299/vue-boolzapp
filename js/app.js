@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            modal:[],
             thisFilterContact: [],
             search: '',
             newMessage:'',
@@ -200,6 +201,13 @@ createApp({
             
 
         },
+        changeBooleanValue(i){
+            if(this.modal[i] === false){
+                this.modal[i] = true
+            }else{
+                this.modal[i] = true
+            }
+        }
         // searchContact(){
         //     const contactsFilter = this.contacts.filter(contact => {
         //         return contact.name.toLowerCase().includes(this.search.toLowerCase());
@@ -217,9 +225,14 @@ createApp({
         // }
     },
 
-    // mounted(){
-    //     console.log(this.contacts[1].messages[1].status)
-    // }
+    mounted(){
+        console.log(this.contacts[1].messages[1].status)
+        this.modal = this.contacts.map(() =>{
+            return{
+                modalShowed: false
+            }
+        });
+    }
 }).mount('#app')
 
 

@@ -52,6 +52,11 @@ body {
     outline: none;
 }
 
+.d_block{
+    display: block;
+}
+
+
 /* LAYOUT */
 #app {
     height: 100vh;
@@ -357,6 +362,14 @@ aside {
 
 .message {
     text-align: left;
+}
+
+.icon-drop-down{
+    cursor: pointer;
+}
+
+.modal_menu{
+    display: none;
 }
 
 .clock__time {
