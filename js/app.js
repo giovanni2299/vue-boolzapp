@@ -231,8 +231,8 @@ createApp({
     // },
 
     mounted(){
-        let dateWithouthSecond = new Date();
-        hours = dateWithouthSecond.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+        // let dateWithouthSecond = new Date();
+        // hours = dateWithouthSecond.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
 
 
 
