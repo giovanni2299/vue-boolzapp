@@ -208,7 +208,7 @@ createApp({
                 this.modal[i] = false
             }
         },
-        
+
         deleteMessage(i){
             this.contacts[this.currentUser].messages.splice(i,1)
             this.changeBooleanValue(i);
@@ -220,17 +220,22 @@ createApp({
         //     this.thisFilterContact = contactsFilter;
         // }
     },
-    computed:{
-        // returnName(){
-        //     if(this.search === toLowerCase(this.search)){
-        //         for(let i = 0; i < contacts.name.length; i++){
+    // computed:{
+    //     // returnName(){
+    //     //     if(this.search === toLowerCase(this.search)){
+    //     //         for(let i = 0; i < contacts.name.length; i++){
 
-        //         }
-        //     }
-        // }
-    },
+    //     //         }
+    //     //     }
+    //     // }
+    // },
 
     mounted(){
+        let dateWithouthSecond = new Date();
+        hours = dateWithouthSecond.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
+
+
+
         console.log(this.contacts[1].messages[1].status)
         this.modal = this.contacts.map(() =>{
             return{

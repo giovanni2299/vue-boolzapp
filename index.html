@@ -60,7 +60,9 @@
 
                 <!-- FRIENDS -->
                 <ul class="friends">
-                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i" :class="contact.name.toLowerCase().includes(search.toLowerCase()) ? '' : 'hidden' ">
+                    <li class="friend slide-in-left" v-for="(contact, i) in contacts"
+                     @click="currentUser = i" 
+                     :class="contact.name.toLowerCase().includes(search.toLowerCase()) ? '' : 'hidden' ">
                         <div class="friend__img">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>
@@ -154,7 +156,15 @@
                         </div>
                         <div class="contact__info">
                             <h3>{{contacts[currentUser].name}}</h3>
-                            <p class="last-access">Ultimo accesso oggi alle 16:26</p class="Last Access">
+
+                            <p class="last-access" v-if="contacts[currentUser].messages.at(-1).status === 'received' " >
+                                Ultimo acesso oggi alle:
+                                {{contacts[currentUser].messages.at(-1).date.slice(11,16)}}
+                            </p>
+                                
+                            <p class="last-access" v-else >
+                                {{contacts[currentUser].messages.at(-2).date.slice(11,16)}}
+                            </p>
                         </div>
                     </div>
                     <div class="menu display-none">
