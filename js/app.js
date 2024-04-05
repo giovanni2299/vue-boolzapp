@@ -181,7 +181,9 @@ createApp({
                     message: this.newMessage,
                     status: 'sent'
                 };
-                this.contacts[this.currentUser].messages.push(this.newMessage)
+                // this.contacts[this.currentUser].messages.push(this.newMessage)
+                const messages = this.contacts[this.currentUser].messages
+                messages.push(this.newMessage)
                 this.newMessage = ''
                 
                 setTimeout(() =>{
@@ -190,7 +192,7 @@ createApp({
                         date: '10/01/2020 18:05:00',
                         status: 'received'
                     }
-                    this.contacts[this.currentUser].messages.push(this.newMessage)
+                    messages.push(this.newMessage)
                     this.newMessage = ''
     
                 },1000)
