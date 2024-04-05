@@ -176,6 +176,8 @@ createApp({
 
     methods:{
         newInsertMessage(){
+            // let dateWithouthSecond = new Date();
+            // hours = dateWithouthSecond.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
             if(this.newMessage !== ''){
                 this.newMessage = {
                     date: '10/01/2020 17:51:00',
@@ -188,6 +190,8 @@ createApp({
                 this.newMessage = ''
                 
                 setTimeout(() =>{
+                    // let dateWithouthSecond = new Date();
+                    // hours = dateWithouthSecond.toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'});
                     this.newMessage = {
                         message:'OK!!!',
                         date: '10/01/2020 18:05:00',
