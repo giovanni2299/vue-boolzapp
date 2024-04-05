@@ -60,17 +60,17 @@
 
                 <!-- FRIENDS -->
                 <ul class="friends">
-                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i" :class="contact.name.toLowerCase().includes(search) || contact.name.toUpperCase().includes(search) ? '' : 'hidden' ">
+                    <li class="friend slide-in-left" v-for="(contact, i) in contacts" @click="currentUser = i" :class="contact.name.toLowerCase().includes(search.toLowerCase()) ? '' : 'hidden' ">
                         <div class="friend__img">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>
                         <div class="friend__info display-none">
                               <p><strong>{{contact.name}}</strong></p>
                               <div>
-                                  <p class="sub__info">Lorem ipsum dolor sit amet.</p> 
+                                  <p class="sub__info">{{contact.messages.at(-1).message}}</p> 
                               </div> 
                         </div>
-                        <div class="list-time display-none">16.15</div>
+                        <div class="list-time display-none">{{contact.messages.at(-1).date.slice(11,16)}}</div>
                     </li>
 
                     <!-- <li class="friend slide-in-left_S">
@@ -186,10 +186,10 @@
                         <p class="message" >
                             {{message.message}}
                         </p>
-                        <div class="icon-drop-down"><i class="fa-solid fa-chevron-down" @click=""></i></div>
-                        <div class="modal_menu">
-                            <p>inoltra</p>
-                            <p>cancella</p>
+                        <div class="icon-drop-down"><i class="fa-solid fa-chevron-down" @click="changeBooleanValue(i)"></i></div>
+                        <div class="modal_menu" :class="modal[i] === true ? 'd_block' : '' ">
+                            <p class="option">inoltra</p>
+                            <p class="option" @click="deleteMessage(i)">cancella</p>
                         </div>
                         <p class="clock__time">{{message.date.slice(11,16)}}</p>
                     </div>

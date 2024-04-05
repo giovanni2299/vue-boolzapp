@@ -205,8 +205,13 @@ createApp({
             if(this.modal[i] === false){
                 this.modal[i] = true
             }else{
-                this.modal[i] = true
+                this.modal[i] = false
             }
+        },
+        
+        deleteMessage(i){
+            this.contacts[this.currentUser].messages.splice(i,1)
+            this.changeBooleanValue(i);
         }
         // searchContact(){
         //     const contactsFilter = this.contacts.filter(contact => {

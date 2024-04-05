@@ -11,7 +11,7 @@ menu {
 }
 
 img {
-    width: 100%;
+    width: max-content;
 }
 
 a {
@@ -53,7 +53,9 @@ body {
 }
 
 .d_block{
-    display: block;
+    display: block !important;
+    z-index: 1;
+
 }
 
 
@@ -309,6 +311,7 @@ aside {
 
     .friend__info {
         display: block;
+        flex-grow: 1;
     }
 
     .list-time {
@@ -333,7 +336,8 @@ aside {
     padding: 20px 15px 2px 15px;
     border-radius: 10px;
     line-height: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 34px;
+    position: relative;
 
 }
 .box-message.slide-in-right {
@@ -369,7 +373,23 @@ aside {
 }
 
 .modal_menu{
+    border-radius: 5px;
     display: none;
+    position: absolute;
+    background-color: white;
+    width: max-content;
+    padding: 5px;
+    top: 52px;
+    right: 48px;
+}
+
+.option{
+
+    cursor: pointer;
+}
+
+.option:hover{
+    background-color: #b9b9b9;
 }
 
 .clock__time {
