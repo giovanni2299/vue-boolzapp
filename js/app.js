@@ -241,6 +241,7 @@ createApp({
 
 
         console.log(this.contacts[1].messages[1].status)
+        
         this.modal = this.contacts.map(() =>{
             return{
                 modalShowed: false
